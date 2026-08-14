@@ -1,0 +1,142 @@
+{
+  "prewedding": {
+    "themeId": "prewedding",
+    "themeName": "Pre-Wedding Vibe",
+    "hindi": {
+      "playlistName": "Pre-Wedding Romantic & Love Melodies (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX56neWGDUrPq",
+      "description": "Sweet pre-wedding acoustic tracks, romantic duets & love themes."
+    },
+    "odia": {
+      "playlistName": "Odia Pre-Wedding Romantic Hits (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX56neWGDUrPq",
+      "description": "Odia pre-wedding romantic duets & heartwarming love melodies."
+    }
+  },
+  "wedding": {
+    "themeId": "wedding",
+    "themeName": "Shaadi & Phere",
+    "hindi": {
+      "playlistName": "Shaadi & Phere Mandap Dhun (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/4ntiUYHbVFMBakXUN7Hzwe?si=j_cGvmQARgWN1y-V6kEHtw&utm_source=whatsapp&pi=QHOyFNmbSLWIP",
+      "description": "Sacred phere, shehnai melodies and mangal geet for Hindi wedding ceremony."
+    },
+    "odia": {
+      "playlistName": "Odia Bahaghara & Mangala Geeta (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/1BKZ94YeLx848XkdK29NXk?si=raKR5wD7T2KZtySyRUajDw&utm_source=whatsapp",
+      "description": "Traditional Odia Bahaghara, Shehnai & Mangala Geeta for weddings."
+    }
+  },
+  "haldi": {
+    "themeId": "haldi",
+    "themeName": "Haldi Rasam",
+    "hindi": {
+      "playlistName": "Haldi Ubtan & Yellow Beats (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX0a2SPdrmxLhP9",
+      "description": "Vibrant dholak, Rajasthani folk & energetic ubtan celebration songs."
+    },
+    "odia": {
+      "playlistName": "Odia Haladi Lagani & Sambalpuri Ubtan (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX6gK3rmxLhP9",
+      "description": "Odia Haladi Lagani, Mahuri flute and Sambalpuri celebration tracks."
+    }
+  },
+  "mehendi": {
+    "themeId": "mehendi",
+    "themeName": "Mehendi Rasam",
+    "hindi": {
+      "playlistName": "Mehendi & Henna Jhumar Hits (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DWV555XrmxLhP9",
+      "description": "Smooth acoustic henna tracks, ladies sangeet & jhumka melodies."
+    },
+    "odia": {
+      "playlistName": "Odia Mehendi & Alata Hits (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX5gK3rmxLhP9",
+      "description": "Odia Mehendi melodies, Alata designs & romantic folk songs."
+    }
+  },
+  "sangeet": {
+    "themeId": "sangeet",
+    "themeName": "Sangeet & Dance",
+    "hindi": {
+      "playlistName": "Sangeet Night & Dholak Party (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX4Yn79XrmxLhP9",
+      "description": "High-energy Bhangra, Bollywood dance anthems & DJ dholak mixes."
+    },
+    "odia": {
+      "playlistName": "Odia Sambalpuri Dhol & Sangeet Blast (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/0saUW1eAeZg4fpqFdGDsnK?si=d5-tjRSQQTeQBdh2cGDk0Q&utm_source=whatsapp",
+      "description": "Rangabati, Sambalpuri Dholak beats, and high energy Odia dance hits."
+    }
+  },
+  "bidaayi": {
+    "themeId": "bidaayi",
+    "themeName": "Bidaayi Hues",
+    "hindi": {
+      "playlistName": "Bidaayi Emotional Shehnai (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DWZt555XrmxLhP9",
+      "description": "Heartfelt farewell songs, Babul ki duaayein & emotional instrumental."
+    },
+    "odia": {
+      "playlistName": "Odia Kania Bidaaya & Dhauli Phata Geeta (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX3gK3rmxLhP9",
+      "description": "Emotional Odia Bidaayi geeta, tearful bridal departure & flute melodies."
+    }
+  },
+  "reception": {
+    "themeId": "reception",
+    "themeName": "Grand Reception",
+    "hindi": {
+      "playlistName": "Royal Reception Ballroom Party (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX1Y799XrmxLhP9",
+      "description": "Glamorous celebration hits, couples dance numbers & ballroom beats."
+    },
+    "odia": {
+      "playlistName": "Odia Grand Reception & DJ Rasarkeli (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX2gK3rmxLhP9",
+      "description": "Odia modern wedding reception hits & Ollywood dance numbers."
+    }
+  },
+  "suhagraat": {
+    "themeId": "suhagraat",
+    "themeName": "First Night Vibe",
+    "hindi": {
+      "playlistName": "Romantic Acoustic Night (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX4p299XrmxLhP9",
+      "description": "Cozy romantic acoustic melodies, mogra unplugged & soft lounge."
+    },
+    "odia": {
+      "playlistName": "Odia Premagiti & Romantic Acoustic (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX1gK3rmxLhP9",
+      "description": "Romantic Odia acoustic unplugged melodies & soft night tunes."
+    }
+  },
+  "bus": {
+    "themeId": "bus",
+    "themeName": "Baraat & DJ",
+    "hindi": {
+      "playlistName": "Baraat Procession & DJ Dance (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX0k999XrmxLhP9",
+      "description": "High-energy Baraat DJ dance anthems, dhol beats & celebration tracks."
+    },
+    "odia": {
+      "playlistName": "Odia Barjatri & Sambalpuri DJ Hits (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX9gK3rmxLhP9",
+      "description": "Odia Barjatri procession beats, DJ Rasarkeli & festive fireworks music."
+    }
+  },
+  "divorce": {
+    "themeId": "divorce",
+    "themeName": "Divorce & Heartbreak",
+    "hindi": {
+      "playlistName": "Broken Heart & Regret Songs (Hindi)",
+      "spotifyUrl": "https://open.spotify.com/playlist/37i9dQZF1DX7qK8ma5wgG1",
+      "description": "Sad Hindi heartbreak songs, regret tunes & post-wedding emotional tracks."
+    },
+    "odia": {
+      "playlistName": "Odia Sad & Heartbreak Melodies (Odia)",
+      "spotifyUrl": "https://open.spotify.com/playlist/1KYbSQwtCcBG94lOcUJ3Z6?si=-Ki1zoZeTseOoqL3tr2gAg&utm_source=whatsapp",
+      "description": "Emotional Odia heartbreak geeta, sorrowful tunes & post-divorce regret songs."
+    }
+  }
+}

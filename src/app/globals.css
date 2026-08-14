@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Odia:wght@600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:wght@700&family=Great+Vibes&family=Tiro+Devanagari+Hindi:ital@0;1&family=Gotu&family=Rozha+One&family=Yatra+One&family=Anek+Odia:wght@600;800&family=Noto+Serif+Odia:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.font-brand-english {
+  font-family: 'Cinzel Decorative', 'Playfair Display', 'Cormorant Garamond', serif;
+}
+
+.font-royal-title {
+  font-family: 'Noto Sans Odia', 'Rozha One', 'Tiro Devanagari Hindi', 'Cinzel Decorative', serif;
+}
+
+.font-devanagari {
+  font-family: 'Rozha One', 'Tiro Devanagari Hindi', 'Gotu', 'Yatra One', serif;
+}
+
+.font-odia {
+  font-family: 'Noto Sans Odia', 'Anek Odia', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-glow-odia {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glassmorphism containers */
+.glass-pill {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-pill-active {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.glass-card {
+  background: rgba(10, 10, 15, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Glowing text */
+.text-glow-gold {
+  text-shadow: 0 0 25px rgba(234, 179, 8, 0.6), 0 0 50px rgba(234, 179, 8, 0.3);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Audio equalizer bars */
+@keyframes equalize {
+  0% { height: 4px; }
+  50% { height: 20px; }
+  100% { height: 4px; }
+}
+
+.equalizer-bar {
+  animation: equalize 1.2s ease-in-out infinite alternate;
+}
+
+.equalizer-bar:nth-child(1) { animation-delay: 0.1s; }
+.equalizer-bar:nth-child(2) { animation-delay: 0.3s; }
+.equalizer-bar:nth-child(3) { animation-delay: 0.2s; }
+.equalizer-bar:nth-child(4) { animation-delay: 0.4s; }
+.equalizer-bar:nth-child(5) { animation-delay: 0.15s; }
+
+/* Hide horizontal scrollbar completely across all elements & browsers */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0px !important;
+  height: 0px !important;
+  background: transparent !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
