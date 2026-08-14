@@ -28,6 +28,7 @@ interface HeaderPillsProps {
 export const HeaderPills: React.FC<HeaderPillsProps> = ({
   onOpenSpotifyModal,
   spotifyPlaylistUrl,
+  currentTrack,
   currentRegion,
   onSelectRegion,
 }) => {
@@ -109,6 +110,14 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
               LIVE
             </span>
           </div>
+
+          {/* Live Playing Track Indicator Pill */}
+          {currentTrack && currentTrack.title && (
+            <div className="glass-pill px-3 py-1 rounded-full flex items-center gap-1.5 text-xs font-semibold text-amber-200 shadow-lg border border-amber-400/40 shrink-0 bg-amber-500/10">
+              <Music2 className="w-3.5 h-3.5 text-amber-400 animate-spin-slow" />
+              <span className="max-w-[130px] sm:max-w-[180px] truncate font-medium">{currentTrack.title}</span>
+            </div>
+          )}
         </div>
       </div>
 
