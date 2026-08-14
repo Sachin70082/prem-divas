@@ -64,11 +64,11 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
 
   const toggleFullscreenMode = () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
+      document.documentElement.requestFullscreen().catch(() => { });
       setIsFullscreen(true);
     } else {
       if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
+        document.exitFullscreen().catch(() => { });
         setIsFullscreen(false);
       }
     }
@@ -76,7 +76,7 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
 
   return (
     <header className="w-full flex flex-col lg:flex-row items-center justify-between gap-2.5 px-3 sm:px-6 py-2.5 z-30 relative select-none">
-      
+
       {/* Top Mobile Row: Clock & Live Audience Stats */}
       <div className="flex items-center justify-between w-full lg:w-auto gap-2">
         <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
@@ -122,11 +122,10 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
         <button
           onClick={() => onSelectRegion("hindi")}
           title="Switch to Hindi Wedding Songs & Playlists"
-          className={`px-4 py-1.5 rounded-full text-xs font-black tracking-wide transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-1.5 border ${
-            currentRegion === "hindi"
+          className={`px-4 py-1.5 rounded-full text-xs font-black tracking-wide transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-1.5 border ${currentRegion === "hindi"
               ? "bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-black border-amber-200 shadow-[0_0_18px_rgba(245,158,11,0.7)] scale-105 ring-2 ring-amber-300"
               : "text-zinc-300 hover:text-white border-white/10 hover:bg-white/15"
-          }`}
+            }`}
         >
           <span className="text-sm">🇮🇳</span>
           <span>Hindi</span>
@@ -135,11 +134,10 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
         <button
           onClick={() => onSelectRegion("odia")}
           title="Switch to Odia (ଓଡ଼ିଆ) Bahaghara Songs & Playlists"
-          className={`px-4 py-1.5 rounded-full text-xs font-black tracking-wide transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-1.5 border ${
-            currentRegion === "odia"
+          className={`px-4 py-1.5 rounded-full text-xs font-black tracking-wide transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-1.5 border ${currentRegion === "odia"
               ? "bg-gradient-to-r from-rose-500 via-pink-600 to-amber-400 text-white border-rose-200 shadow-[0_0_22px_rgba(244,63,94,0.8)] scale-105 ring-2 ring-rose-300"
               : "text-zinc-300 hover:text-white border-white/10 hover:bg-white/15"
-          }`}
+            }`}
         >
           <span className="text-sm">🌸</span>
           <span>Odia (ଓଡ଼ିଆ)</span>
