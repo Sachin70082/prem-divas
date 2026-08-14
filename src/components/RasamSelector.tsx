@@ -39,18 +39,15 @@ export const RasamSelector: React.FC<RasamSelectorProps> = ({
     { id: "divorce", label: isOdia ? "ତଲାକ୍ (Divorce & Heartbreak)" : "Divorce & Regret" },
   ];
 
-  // Directly switch to Previous or Next Rasam Theme on Arrow Click & Scroll to it
-  const handleSelectNextOrPrevTheme = (direction: "left" | "right") => {
-    const currentIndex = RASAM_THEMES.findIndex((t) => t.id === currentTheme.id);
-    let targetIndex = 0;
-    if (direction === "left") {
-      targetIndex = (currentIndex - 1 + RASAM_THEMES.length) % RASAM_THEMES.length;
-    } else {
-      targetIndex = (currentIndex + 1) % RASAM_THEMES.length;
+  // Smoothly Scroll Category Nav Container on Arrow Click (Without Changing Active Theme)
+  const handleScrollNav = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === "left" ? -220 : 220;
+      scrollRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
     }
-
-    const targetTheme = RASAM_THEMES[targetIndex];
-    onSelectTheme(targetTheme);
   };
 
   // Auto-scroll active theme button into view with proper centering
@@ -103,12 +100,12 @@ export const RasamSelector: React.FC<RasamSelectorProps> = ({
 
           <div className="relative flex items-center justify-between gap-1.5 z-10">
             
-            {/* Middle Scrollable Themes Carousel - Arrow Buttons DIRECTLY CHANGE Theme */}
+            {/* Middle Scrollable Themes Carousel */}
             <div className="flex items-center flex-1 min-w-0 mx-0.5">
-              {/* Left Arrow Button (Directly switches to Previous Theme) */}
+              {/* Left Arrow Button (Scrolls Menu Left) */}
               <button
-                onClick={() => handleSelectNextOrPrevTheme("left")}
-                title="Previous Category"
+                onClick={() => handleScrollNav("left")}
+                title="Scroll Left"
                 className="flex shrink-0 w-8 h-8 rounded-full bg-zinc-900/90 hover:bg-amber-500 hover:text-black border border-amber-400/40 items-center justify-center text-amber-300 transition-all shadow-md cursor-pointer active:scale-90 mr-1.5"
               >
                 <ChevronLeft className="w-4.5 h-4.5 stroke-[3]" />
@@ -157,10 +154,10 @@ export const RasamSelector: React.FC<RasamSelectorProps> = ({
                 })}
               </div>
 
-              {/* Right Arrow Button (Directly switches to Next Theme) */}
+              {/* Right Arrow Button (Scrolls Menu Right) */}
               <button
-                onClick={() => handleSelectNextOrPrevTheme("right")}
-                title="Next Category"
+                onClick={() => handleScrollNav("right")}
+                title="Scroll Right"
                 className="flex shrink-0 w-8 h-8 rounded-full bg-zinc-900/90 hover:bg-amber-500 hover:text-black border border-amber-400/40 items-center justify-center text-amber-300 transition-all shadow-md cursor-pointer active:scale-90 ml-1.5"
               >
                 <ChevronRight className="w-4.5 h-4.5 stroke-[3]" />

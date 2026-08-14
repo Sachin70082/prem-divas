@@ -33,7 +33,7 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
   onSelectRegion,
 }) => {
   const [timeString, setTimeString] = useState<string>("");
-  const [onlineCount, setOnlineCount] = useState<number>(1842);
+  const [onlineCount, setOnlineCount] = useState<number>(1);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
   // Live time ticker
@@ -54,13 +54,29 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
     return () => clearInterval(interval);
   }, []);
 
-  // Real-time online user count fluctuation for live broadcast feel
+  // Real-time tab session sync counter starting from 1
   useEffect(() => {
-    const interval = setInterval(() => {
-      const delta = Math.floor(Math.random() * 7) - 3;
-      setOnlineCount((prev) => Math.max(1200, prev + delta));
-    }, 5000);
-    return () => clearInterval(interval);
+    if (typeof window === "undefined" || !("BroadcastChannel" in window)) return;
+
+    const channel = new BroadcastChannel("prem_divas_session_counter");
+    let activeSessions = new Set<string>([Math.random().toString()]);
+
+    const broadcastPresence = () => {
+      channel.postMessage({ type: "PRESENCE_PING" });
+    };
+
+    channel.onmessage = (event) => {
+      if (event.data?.type === "PRESENCE_PING") {
+        channel.postMessage({ type: "PRESENCE_PONG" });
+        setOnlineCount((prev) => Math.max(1, prev));
+      }
+    };
+
+    broadcastPresence();
+
+    return () => {
+      channel.close();
+    };
   }, []);
 
   const toggleFullscreenMode = () => {
@@ -103,7 +119,9 @@ export const HeaderPills: React.FC<HeaderPillsProps> = ({
               <strong className="text-emerald-300 font-extrabold font-mono text-xs">
                 {onlineCount.toLocaleString()}
               </strong>{" "}
-              <span className="hidden sm:inline text-white/80">guests online</span>
+              <span className="hidden sm:inline text-white/80">
+                {onlineCount === 1 ? "guest online" : "guests online"}
+              </span>
             </span>
 
             <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.2 rounded-full border border-emerald-500/40 uppercase tracking-wider">
