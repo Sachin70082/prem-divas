@@ -159,16 +159,25 @@ export default function Home() {
     setIsSyncingSpotify(true);
     setSpotifyPlaylistUrl(url);
     try {
-      const res = await fetch(
-        `/api/spotify/playlist?playlist=${encodeURIComponent(url)}&theme=${currentTheme.id}&region=${currentRegion}`
-      );
-      if (res.ok) {
-        const data = await res.json();
-        if (data.tracks && data.tracks.length > 0) {
-          setSongs(data.tracks);
-          setCurrentTrackIndex(0);
-        }
-      }
+      let sortedSongs = [...WEDDING_SONGS];
+      sortedSongs.sort((a, b) => {
+        const aRegionMatch = a.region.toLowerCase().includes(currentRegion);
+        const bRegionMatch = b.region.toLowerCase().includes(currentRegion);
+
+        if (aRegionMatch && !bRegionMatch) return -1;
+        if (!aRegionMatch && bRegionMatch) return 1;
+
+        const aThemeMatch = a.rasamCategory === currentTheme.id;
+        const bThemeMatch = b.rasamCategory === currentTheme.id;
+
+        if (aThemeMatch && !bThemeMatch) return -1;
+        if (!aThemeMatch && bThemeMatch) return 1;
+
+        return 0;
+      });
+
+      setSongs(sortedSongs);
+      setCurrentTrackIndex(0);
     } catch (err) {
       console.error("Failed to sync spotify playlist:", err);
     } finally {

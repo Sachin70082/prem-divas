@@ -20,6 +20,7 @@ interface HeaderPillsProps {
   ambientActive: boolean;
   toggleAmbient: () => void;
   spotifyPlaylistUrl: string;
+  currentTrack?: any;
   currentRegion: "hindi" | "odia";
   onSelectRegion: (region: "hindi" | "odia") => void;
 }
